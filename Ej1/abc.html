@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>abc</title>
+    <script src = "script.js"> </script>
+</head>
+<body>
+    <body>
+        <h1>Generador de Número Aleatorio</h1>
+        <p>Haz clic en el botón para generar un número aleatorio entre 1 y 100.</p>
+    
+        <button onclick="generarNumero()">Generar Número</button>
+    
+        <p id="numero"></p>
+        <p id="resultado"></p>
+        <script>
+            function generarNumero() {
+                // Generar un número aleatorio entre 1 y 100
+                let numeroAleatorio = Math.floor(Math.random() * 100) + 1;
+    
+                // Mostrar el número en la página
+                document.getElementById("numero").textContent = "Número generado: " + numeroAleatorio;
+    
+                // Verificar si el número es par o impar
+                let resultado = (numeroAleatorio % 2 === 0) ? "es par" : "es impar";
+    
+                // Mostrar el resultado
+                document.getElementById("resultado").textContent = "El número " + numeroAleatorio + " " + resultado + ".";
+            }
+        </script>
+</body>
+</html>
+
